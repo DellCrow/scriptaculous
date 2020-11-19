@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="javascripts/prototype.js" type="text/javascript"></script>
+    <script src="javascripts/scriptaculous.js" type="text/javascript"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+
+  <body>
+    <div id="titulo">
+      <h1>SCRIPTACULOUS!</h1>
+    </div>
+
+    <div id="testes">
+      <button class="btn btn-primary btn-sm" onClick="window.location.reload();">Refresh Page</button>
+      <h4>Testes:</h4>
+
+      <!-- Faz algo pulsar -->
+      <div class="teste">
+        <p>Faz algo pulsar</p>
+        <div class="padding">
+          <div id="pulsate_demo" style="width:100%; height:50px; background:#00ff00; border-radius: 5px; padding: 5px;text-align:center;">
+            <a href="#" onclick="Effect.Pulsate('pulsate_demo');" style="line-height:40px;">Me faz pulsar!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Muda uma propriedade do CSS -->
+      <div class="teste">
+        <p>Muda uma ou mais mais propriedades do CSS</p>
+        <div class="padding">
+          <div
+          id="morph_demo"
+          style="background: #cccccc; width: 10%; height: 120px"
+        ></div>
+        <a
+          href="#"
+          onclick="$('morph_demo').morph('background:#00ff00; width:100%;');"
+          >Me faz carregar!</a
+        >
+      </br>
+        <a
+          href="#"
+          onclick="$('morph_demo').morph('background:#cccccc; width:10%;');"
+          >Reset!</a
+        >
+        </div>
+      </div>
+
+      <!-- faz algo balançar -->
+      <div class="teste">
+        <p>Faz algo balançar</p>
+        <div class="padding">
+          <div id="shake_demo" style="width:100%; height:40px; background:#ccc; border-radius: 5px; text-align:center;">
+            <a href="#" onclick="new Effect.Shake('shake_demo'); return false;" style="line-height:40px;">Me faz balançar!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faz algo se mover -->
+      <div class="teste">
+        <p>Move algo</p>
+        <div class="padding">
+          <a href="#" id="move_demo" onclick="new Effect.Move(this, { x: 20, y: 0 });">Me faz andar pra direita</a>
+        </div>
+        <div class="padding">
+          <a href="#" id="move_demo" onclick="new Effect.Move(this, { x: -20, y: 0 });">Me faz andar pra esquerda</a>
+        </div>
+      </div>
+
+      <!-- Apresenta variação das animações de mover -->
+      <div class="teste">
+        <p>Variação das animações</p>
+        <div class="paddingMenor">
+          <a href="#" id="move_demo2" onclick="new Effect.Move(this, { x: 0, y: 50, transition: Effect.Transitions.spring }); ">Animação SPRING</a>
+        </div>
+        <div class="paddingMenor">
+          <a href="#" id="move_demo2" onclick="new Effect.Move(this, { x: 0, y: 50, transition: Effect.Transitions.sinoidal }); ">Animação SINOIDAL</a>
+        </div>
+        <div class="paddingMenor">
+          <a href="#" id="move_demo2" onclick="new Effect.Move(this, { x: 0, y: 50, transition: Effect.Transitions.pulse }); ">Animação PULSE</a>
+        </div>
+      </div>
+
+      <!-- Faz algo desaparecer -->
+      <div class="teste">
+        <p>Faz algo desaparecer gradientemente</p>
+        <img id="opacity_demo" style="width:150px; height:150px;" src="meme.png">
+        <div>
+          <a href="#" onclick="new Effect.Opacity('opacity_demo', { from: 1, to: 0 }); return false;">Desaparecer</a>
+        </br>
+          <a href="#" onclick="new Effect.Opacity('opacity_demo', { from: 0, to: 1 }); return false;">Aparecer</a></li>
+        </div>
+      </div>
+
+        <!-- Esconde algo com estilo -->
+        <div class="teste">
+          <p>Faz uma animação para esconder algo</p>
+          <div class="padding">
+            <div id="fold_demo" style="width:100%; height:120px; background: #00ff00;"></div>
+            <a href="#" onclick="Effect.Fold('fold_demo');">Guarde-me!</a>
+          </br>
+            <a href="#" onclick="$('fold_demo').show();">Reset</a>
+          </div>
+        </div>
+
+
+      <!-- Muda o tamanho de algo -->
+      <div class="teste">
+        <p>Muda o tamanho de algo</p>
+        <div class="padding">
+          <a id="ler" href="#" onclick="new Effect.Scale(this, 125); return false;"> 
+            Leia-me, se for capaz</a>
+        </div>
+        
+      </div>
+
+      <!-- Abre e fecha algo -->
+      <div class="teste">
+        <p>Faz algo aparecer com um Slide Down</p>
+        <div class="padding">
+          <div id="slidedown_demo" style="display:none; width:100%; height:80px; background:#ccc; text-align:center;">
+            <div>
+              Oi linda! Você me leu, agora poderia fechar aqui?
+            </div>
+          </div>
+            <a href="#" onclick="Effect.SlideDown('slidedown_demo');">Abra-me!</a>
+        </br>
+            <a href="#" onclick="$('slidedown_demo').hide();">Reset</a>
+
+        </div>
+      </div>
+
+      <!-- Faz acender por um periodo de tempo algo -->
+      <div class="teste">
+        <p>Faz algo acender e depois apagar</p>
+        <p
+          id="highlight_demo"
+          style="
+            padding: 10px;
+            border: 1px solid #ccc;
+            height: 256px;
+            background: #ffffff;
+          "
+        >
+          Esse Texto vai brilhar quando você clicar, tente aqui!<br />
+
+          <a
+            href="#"
+            onclick="new Effect.Highlight(this.parentNode, { startcolor: '#ffff99',
+          endcolor: '#ffffff' }); return false;"
+          >
+            Me faz piscar!
+          </a>
+        </p>
+      </div>
+
+      <!-- Faz algo encolher até sumir -->
+      <div class="teste">
+        <p>Encolhe algo até sumir</p>
+        <div class="padding">
+          <img id="shrink_demo" style="width:150px; height:150px;" src="antman.png">
+        </br>
+          <a href="#" onclick="Effect.Shrink('shrink_demo'); return false;">Encolha-me!</a>
+        </br>
+          <a href="#" onclick="$('shrink_demo').show(); return false;">Reset</a>
+        </div>
+      </div>
+
+      <div class="teste">
+        <p>Faz algo "explodir" e desaparecer</p>
+        <div class="padding">
+          <img id="puff_demo" style="width:50%; margin-left: auto; margin-right: auto;" src="explosion.png">
+        </br> 
+          <a href="#" onclick="new Effect.Puff('puff_demo'); return false;">Me faz explodir!</a>
+        </br>  
+          <a href="#" onclick="$('puff_demo').setStyle({ display: 'block', opacity:1, width:'150px', height:'150px' }); return false;">Reset</a>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
